@@ -1,5 +1,20 @@
 package programas.activi.grupal;
 
-public class CODIFICACION  {
-    
+import java.util.Random;
+
+public class CODIFICACION {
+
+    public CODIFICACION() {
+        this.Ran = new Random();
+    }
+    private String[] frases = {
+        "La programación es el arte de hacer que un ordenador haga lo que tú quieres.",
+        "El código es poesía.",
+        "Un buen programador es un artista; el código es su lienzo.",
+        "El mal software de una persona es el trabajo fijo de otra.",
+        "No es importante que salga bien la primera vez. Es vital que salga bien la última vez."
+    };
+
+    private Random Ran;
+
 }
