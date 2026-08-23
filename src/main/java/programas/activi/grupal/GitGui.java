@@ -43,6 +43,7 @@ public class GitGui extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(153, 255, 102));
         jButton1.setText("PRESIONAR");
+        jButton1.addActionListener(this::jButton1ActionPerformed);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -70,10 +71,12 @@ public class GitGui extends javax.swing.JFrame {
 
         jTextArea2.setColumns(20);
         jTextArea2.setRows(5);
-        jTextArea2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jTextArea2.setBorder(javax.swing.BorderFactory.createBevelBorder(
+            javax.swing.border.BevelBorder.RAISED
+        ));
         jTextArea2.setDisabledTextColor(new java.awt.Color(255, 255, 255));
-        jTextArea2.setEnabled(false);
         jTextArea2.setSelectionColor(new java.awt.Color(0, 0, 0));
+        jTextArea2.setVerifyInputWhenFocusTarget(false);
         jScrollPane1.setViewportView(jTextArea2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -94,6 +97,11 @@ public class GitGui extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        CODIFICACION codigo = new CODIFICACION();
+        jTextArea2.setText(codigo.obtenerFrase());
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
