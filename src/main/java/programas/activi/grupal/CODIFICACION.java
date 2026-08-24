@@ -3,10 +3,7 @@ package programas.activi.grupal;
 import java.util.Random;
 
 public class CODIFICACION {
-
-    public CODIFICACION() {
-        this.Ran = new Random();
-    }
+    
     private String[] frases = {
         "La programación es el arte de hacer que un ordenador haga lo que tú quieres.",
         "El código es poesía.",
@@ -16,5 +13,12 @@ public class CODIFICACION {
     };
 
     private Random Ran;
+    public CODIFICACION(){
+        this.Ran = new Random();
+    }
+    public String obtenerFrase(){
+        int posicion = Ran.nextInt(frases.length);
+        return frases[posicion];
+    }
 
 }
