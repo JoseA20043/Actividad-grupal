@@ -13,6 +13,7 @@ public class CODIFICACION {
     };
 
     private Random Ran;
+   
     public CODIFICACION(){
         this.Ran = new Random();
     }
